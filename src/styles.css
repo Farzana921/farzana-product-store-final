@@ -1,0 +1,119 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-success: var(--success);
+  --color-hover-accent: var(--hover-accent);
+  --font-display: "Cormorant Garamond", "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 1.25rem;
+  /* Luxury palette */
+  --background: oklch(0.961 0 0);            /* #F2F2F2 */
+  --foreground: oklch(0 0 0);                /* #000000 */
+  --card: oklch(1 0 0);                      /* #FFFFFF */
+  --card-foreground: oklch(0 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0 0 0);
+  --primary: oklch(0 0 0);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.911 0.018 85);        /* #EAE4D5 */
+  --secondary-foreground: oklch(0.18 0 0);
+  --muted: oklch(0.911 0.018 85);
+  --muted-foreground: oklch(0.43 0 0);       /* #5C5C5C */
+  --accent: oklch(0.745 0.022 85);           /* #B6B09F */
+  --accent-foreground: oklch(0 0 0);
+  --hover-accent: oklch(0.685 0.022 85);     /* #A69F8C */
+  --destructive: oklch(0.637 0.237 25);      /* #EF4444 */
+  --destructive-foreground: oklch(1 0 0);
+  --success: oklch(0.723 0.183 145);         /* #22C55E */
+  --border: oklch(0.866 0.018 85);           /* #D8D2C2 */
+  --input: oklch(0.866 0.018 85);
+  --ring: oklch(0.745 0.022 85);
+}
+
+.dark {
+  --background: oklch(0.16 0 0);
+  --foreground: oklch(0.96 0 0);
+  --card: oklch(0.21 0 0);
+  --card-foreground: oklch(0.96 0 0);
+  --popover: oklch(0.21 0 0);
+  --popover-foreground: oklch(0.96 0 0);
+  --primary: oklch(0.911 0.018 85);
+  --primary-foreground: oklch(0.16 0 0);
+  --secondary: oklch(0.26 0.01 85);
+  --secondary-foreground: oklch(0.96 0 0);
+  --muted: oklch(0.26 0.01 85);
+  --muted-foreground: oklch(0.72 0 0);
+  --accent: oklch(0.55 0.022 85);
+  --accent-foreground: oklch(0.96 0 0);
+  --hover-accent: oklch(0.62 0.022 85);
+  --border: oklch(0.32 0.01 85);
+  --input: oklch(0.32 0.01 85);
+  --ring: oklch(0.55 0.022 85);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: var(--font-display); letter-spacing: -0.02em; }
+}
+
+/* Shimmer skeleton */
+.skeleton-shimmer {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-secondary);
+}
+.skeleton-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background-image: linear-gradient(90deg, transparent, rgba(255,255,255,0.55), transparent);
+  animation: shimmer 1.6s infinite;
+}
+@keyframes shimmer { 100% { transform: translateX(100%); } }
+
+.glass {
+  background: color-mix(in oklab, var(--color-background) 70%, transparent);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.luxury-shadow { box-shadow: 0 10px 40px -12px color-mix(in oklab, var(--color-foreground) 18%, transparent); }
