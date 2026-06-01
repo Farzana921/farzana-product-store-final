@@ -134,8 +134,7 @@ src/
 ├── services/        API requests
 ├── routes/          Application routes
 ├── utils/           Helper functions
-├── App.tsx
-└── main.tsx
+└── styles.css
 ```
 
 ---
@@ -145,13 +144,13 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/Farzana921/elevated-style-boutique.git
+git clone https://github.com/Farzana921/farzana-product-store-final.git
 ```
 
 Navigate to the project folder:
 
 ```bash
-cd elevated-style-boutique
+cd farzana-product-store-final
 ```
 
 Install dependencies:
@@ -165,12 +164,6 @@ Start the development server:
 ```bash
 npm run dev
 ```
-
----
-
-## Live Demo
-
-https://luxoria-curated.lovable.app
 
 ---
 
