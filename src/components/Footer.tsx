@@ -21,8 +21,8 @@ const Footer = () => (
         <div>
           <h4 className="text-xs uppercase tracking-[0.3em] text-muted-foreground">Connect</h4>
           <div className="mt-4 flex gap-3">
-            <a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub" className="rounded-full border border-border p-3 hover:bg-foreground hover:text-background"><FiGithub /></a>
-            <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rounded-full border border-border p-3 hover:bg-foreground hover:text-background"><FiLinkedin /></a>
+            <a href="https://github.com/Farzana921" target="_blank" rel="noreferrer" aria-label="GitHub" className="rounded-full border border-border p-3 hover:bg-foreground hover:text-background"><FiGithub /></a>
+            <a href="https://www.linkedin.com/in/farzana-akbari-8bb715327/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="rounded-full border border-border p-3 hover:bg-foreground hover:text-background"><FiLinkedin /></a>
             <a href="#" aria-label="Portfolio" className="rounded-full border border-border p-3 hover:bg-foreground hover:text-background"><FiGlobe /></a>
           </div>
         </div>
